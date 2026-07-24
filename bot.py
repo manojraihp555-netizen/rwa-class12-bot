@@ -84,7 +84,7 @@ def main():
         MessageHandler(filters.StatusUpdate.LEFT_CHAT_MEMBER, goodbye)
     )
 
-    print("✅ Bot Started...")
+    print("Bot Started...")
     app.run_polling()
 
 if __name__ == "__main__":
