@@ -59,7 +59,9 @@ async def welcome(update: Update, context: ContextTypes.DEFAULT_TYPE):
             f"👋 Welcome {member.first_name}! ❤🌷\n\n"
             "आपका RWA DOUBT GROUP में हार्दिक स्वागत है।\n\n"
             "📜 Rules देखने के लिए /rules लिखें।"
-        async def goodbye(update: Update, context: ContextTypes.DEFAULT_TYPE):
+        )
+
+async def goodbye(update: Update, context: ContextTypes.DEFAULT_TYPE):
     member = update.message.left_chat_member
     if member:
         await update.message.reply_text(
@@ -83,7 +85,7 @@ def main():
     )
 
     print("✅ Bot Started...")
-    app.run_polling(allowed_updates=Update.ALL_TYPES)
+    app.run_polling()
 
 if __name__ == "__main__":
     main()
